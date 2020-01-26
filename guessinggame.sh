@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # File: guessinggame.sh
 function guessinggame {
-	n=$(ls -1 | wc -l)
+	n=$(ls -1A | wc -l)
 
 	ans=0
 	echo "Please guess how many files in the current directory:"
