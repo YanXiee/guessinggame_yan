@@ -11,7 +11,7 @@ function guessinggame {
 		read ans
 		if ! [[ "$ans" =~ ^[0-9]+$ ]]
 		then 
-			echo "Sorry integers only!"
+			echo "Sorry, please enter an integer:"
 		elif [[ $ans -lt $n ]]
 		then
 			echo "$ans is too small, try again:"
