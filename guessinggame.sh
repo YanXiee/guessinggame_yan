@@ -9,8 +9,10 @@ function guessinggame {
 	while [[ $ans -ne $n ]]
 	do
 		read ans
-
-		if [[ $ans -lt $n ]]
+		if ! [[ "$ans" =~ ^[0-9]+$ ]]
+		then 
+			echo "Sorry integers only!"
+		elif [[ $ans -lt $n ]]
 		then
 			echo "$ans is too small, try again:"
 		elif [[ $ans -gt $n ]]
@@ -20,6 +22,7 @@ function guessinggame {
 			echo "That's correct! Well done!"
 		fi
 	done
+	
 }
 
 guessinggame
